@@ -1,5 +1,7 @@
 # ep_dataporten
 
+This plugin implements https://github.com/UNINETT/passport-dataporten, and is a further development on https://github.com/andreassolberg/ep_feideconnect
+
 If used without Docker, add this to settings.json:
 
 ```
