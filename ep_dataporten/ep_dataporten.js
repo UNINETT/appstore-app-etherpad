@@ -8,10 +8,10 @@ var settings 			= require('ep_etherpad-lite/node/utils/Settings'),
     json 				= require('express-json'),
     session 			= require('express-session');
 
-var redirectUri = process.env.TLF == "true" ? "https://" + process.env.HOST : "http://" + process.env.HOST || "";
+var redirectUri = process.env.TLS == "true" ? "https://" + process.env.HOST : "http://" + process.env.HOST || settings.ep_dataporten.host;
 var config = {
-	clientID: process.env.DATAPORTEN_CLIENTID || "",
-	clientSecret: process.env.DATAPORTEN_CLIENTSECRET || "",
+	clientID: process.env.DATAPORTEN_CLIENTID || settings.ep_dataporten.clientId,
+	clientSecret: process.env.DATAPORTEN_CLIENTSECRET || settings.ep_dataporten.clientSecret,
 	callbackURL: redirectUri,
 }
 

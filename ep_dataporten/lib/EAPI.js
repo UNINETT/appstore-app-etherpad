@@ -226,7 +226,7 @@ var getGroupIDs = function(user, callback) {
 
 	var fcgroupids = getFCGroupIDs(user);
 	getAuthorID(user, function(authorID) {
-
+		console.log(authorID);
 		async.map(fcgroupids, function(fcgroupid, callback) {
 
 			resolveGroupID(fcgroupid, function(groupid) {

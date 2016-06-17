@@ -1,6 +1,6 @@
 {
   "name": "ep_dataporten",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Etherpad Lite Plugin for Dataporten Authentication and Authorization",
   "author": "Kasper Rynning-Tønnesen <kasper@kasperrt.no>",
   "contributors": [],
@@ -10,7 +10,8 @@
     "body-parser":"*",
     "express-json":"*",
     "express-session":"*",
-    "async":"*"
+    "async":"*",
+    "uniqid":"*"
   },
   "repository": {
     "type": "git",

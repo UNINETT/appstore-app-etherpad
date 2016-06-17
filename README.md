@@ -10,6 +10,8 @@ ep_dataporten:{
 }
 ```
 
+And move the ep_dataporten folder to etherpad/node_modules/
+
 If used with Docker, pull the image from
 
 ```$ docker pull uninettno/ep_dataporten```
