@@ -209,5 +209,5 @@ exports.expressConfigure = function (hook_name, args, cb) {
 		}
 	});
 
-	app.use('/', exp.static(__dirname + '/webapp/'));
+	app.use('/', exp.static(__dirname + '/lib/ep_feideconnect/webapp/'));
 };
