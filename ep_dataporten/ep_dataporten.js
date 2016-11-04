@@ -12,7 +12,7 @@ var redirectUri = process.env.TLS == "true" ? "https://" + process.env.HOST : "h
 var config = {
 	clientID: process.env.DATAPORTEN_CLIENTID || settings.ep_dataporten.clientId,
 	clientSecret: process.env.DATAPORTEN_CLIENTSECRET || settings.ep_dataporten.clientSecret,
-	callbackURL: redirectUri + "/auth/dataporten/callback",
+	callbackURL: redirectUri + "/dataporten/callback",
 }
 
 passport.use(new DataportenStrategy(config, 
