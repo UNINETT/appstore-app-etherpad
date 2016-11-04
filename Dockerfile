@@ -24,9 +24,7 @@ RUN ln -s var/settings.json settings.json
 COPY ep_dataporten node_modules/ep_dataporten
 RUN cd node_modules/ep_dataporten && npm install
 
-RUN ls -all
-
-RUN curl -SL https://github.com/andreassolberg/ep_feideconnect/archive/master.zip > ep_feideconnect.zip && unzip ep_feideconnect.zip && rm ep_feideconnect.zip && mv ep_feideconnect-master ep_feideconnect
+RUN cd node_modules/ep_dataporten/lib && rm ep_feideconnect && curl -SL https://github.com/andreassolberg/ep_feideconnect/archive/master.zip > ep_feideconnect.zip && unzip ep_feideconnect.zip && rm ep_feideconnect.zip && mv ep_feideconnect-master ep_feideconnect
 
 EXPOSE 9001
 
