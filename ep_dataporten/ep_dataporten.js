@@ -1,12 +1,12 @@
 
-var settings 			= require('ep_etherpad-lite/node/utils/Settings'),
-    exp 				= require('ep_etherpad-lite/node_modules/express'),
-    passport 			= require('passport'),
-    DataportenStrategy 	= require('passport-dataporten').Strategy,
-    bodyParser 			= require('body-parser'),
-   	EAPI 				= require('./lib/EAPI.js'),
-    json 				= require('express-json'),
-    session 			= require('express-session');
+var settings 				= require('ep_etherpad-lite/node/utils/Settings'),
+    exp 					= require('ep_etherpad-lite/node_modules/express'),
+    passport 				= require('passport'),
+    DataportenStrategy 		= require('passport-dataporten').Strategy,
+    bodyParser 				= require('body-parser'),
+   	EAPI 					= require('./lib/EAPI.js'),
+    json 					= require('express-json'),
+    session 				= require('express-session');
 
 var redirectUri = process.env.TLS == "true" ? "https://" + process.env.HOST : "http://" + process.env.HOST || settings.ep_dataporten.host;
 var config = {
@@ -78,7 +78,7 @@ exports.expressConfigure = function (hook_name, args, cb) {
     });
 
     app.use('/logout', function(req, res) {
-		req.session.destroy();
+		req.logout();
 		res.redirect("https://auth.dataporten.no/logout");
 	});
 
@@ -209,5 +209,5 @@ exports.expressConfigure = function (hook_name, args, cb) {
 		}
 	});
 
-	app.use('/', exp.static(__dirname + '/lib/ep_feideconnect/webapp/'));
+	app.use('/', exp.static(__dirname + '/webapp/'));
 };
