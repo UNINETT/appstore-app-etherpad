@@ -22,6 +22,9 @@ Run it with:
 
 ```$ docker run -p 80:9001 --env-file=YOUR_ENV_FILE -t uninettno/ep_dataporten```
 
+### IMPORTANT* 
+### On Dataporten Dashboard, set callback-url to URL + /dataporten/callback
+
 The ENV file should look something like this:
 
 ```ETHERPAD_DB_HOST=DB_HOSTNAME
@@ -29,7 +32,7 @@ ETHERPAD_DB_USER=DB_USERNAME
 ETHERPAD_DB_PASSWORD=DB_PASSWORD
 ETHERPAD_DB_NAME=DB_NAME
 
-HOST=localhost/dataporten/callback  #Don't add http:// here, TLS takes care of this.
+HOST=localhost  #Don't add http:// here, TLS takes care of this.
 TLS=false
 DATAPORTEN_CLIENTID=********-****-****-****-************
 DATAPORTEN_CLIENTSECRET=********-****-****-****-************
