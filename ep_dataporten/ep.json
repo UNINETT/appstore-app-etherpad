@@ -6,9 +6,6 @@
             	"expressConfigure": "ep_dataporten/ep_dataporten",
             	"authenticate": "ep_dataporten/ep_dataporten",
             	"authorize": "ep_dataporten/ep_dataporten"
-            },
-            "client_hooks": {
-                "postAceInit" : "ep_dataporten/lib/static/js/index"
             }
         }
     ]
