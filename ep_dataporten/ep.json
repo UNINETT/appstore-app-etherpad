@@ -8,7 +8,7 @@
             	"authorize": "ep_dataporten/ep_dataporten"
             },
             "client_hooks": {
-                "postAceInit" : "ep_dataporten/lib/static/js/index"
+                "postAceInit" : "lib/static/js/index"
             }
         }
     ]
