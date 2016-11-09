@@ -26,11 +26,11 @@ RUN cd node_modules/ep_dataporten && npm install
 
 # RUN cd node_modules/ep_dataporten/lib && rm -rf ep_feideconnect && curl -SL https://github.com/andreassolberg/ep_feideconnect/archive/master.zip > ep_feideconnect.zip && unzip ep_feideconnect.zip && rm ep_feideconnect.zip && mv ep_feideconnect-master ep_feideconnect
 
-RUN cd node_modules/ep_dataporten/lib/ep_feideconnect/webapp/uninett-theme/ && curl -o fonts/colfaxLight.woff http://mal.uninett.no/uninett-theme/fonts/colfaxLight.woff
-RUN cd node_modules/ep_dataporten/lib/ep_feideconnect/webapp/uninett-theme/ && curl -o fonts/colfaxMedium.woff http://mal.uninett.no/uninett-theme/fonts/colfaxMedium.woff
-RUN cd node_modules/ep_dataporten/lib/ep_feideconnect/webapp/uninett-theme/ && curl -o fonts/colfaxRegular.woff http://mal.uninett.no/uninett-theme/fonts/colfaxRegular.woff
-RUN cd node_modules/ep_dataporten/lib/ep_feideconnect/webapp/uninett-theme/ && curl -o fonts/colfaxThin.woff http://mal.uninett.no/uninett-theme/fonts/colfaxThin.woff
-RUN cd node_modules/ep_dataporten/lib/ep_feideconnect/webapp/uninett-theme/ && curl -o fonts/colfaxRegularItalic.woff http://mal.uninett.no/uninett-theme/fonts/colfaxRegularItalic.woff
+RUN cd node_modules/ep_dataporten/webapp/uninett-theme/ && curl -o fonts/colfaxLight.woff http://mal.uninett.no/uninett-theme/fonts/colfaxLight.woff
+RUN cd node_modules/ep_dataporten/webapp/uninett-theme/ && curl -o fonts/colfaxMedium.woff http://mal.uninett.no/uninett-theme/fonts/colfaxMedium.woff
+RUN cd node_modules/ep_dataporten/webapp/uninett-theme/ && curl -o fonts/colfaxRegular.woff http://mal.uninett.no/uninett-theme/fonts/colfaxRegular.woff
+RUN cd node_modules/ep_dataporten/webapp/uninett-theme/ && curl -o fonts/colfaxThin.woff http://mal.uninett.no/uninett-theme/fonts/colfaxThin.woff
+RUN cd node_modules/ep_dataporten/webapp/uninett-theme/ && curl -o fonts/colfaxRegularItalic.woff http://mal.uninett.no/uninett-theme/fonts/colfaxRegularItalic.woff
 
 EXPOSE 9001
 
