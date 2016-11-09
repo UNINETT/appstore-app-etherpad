@@ -73,12 +73,11 @@ exports.expressConfigure = function (hook_name, args, cb) {
 	app.get('/dataporten/callback', passport.authorize('dataporten', { failureRedirect: '/login' }),
     function(req, res) {
     	req.session.user = req.account;
-    	console.log(req.session.user);
        	res.redirect("/");
     });
 
     app.use('/logout', function(req, res) {
-		req.logout();
+		req.session.destroy();
 		res.redirect("https://auth.dataporten.no/logout");
 	});
 
