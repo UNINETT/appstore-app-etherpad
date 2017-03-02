@@ -63,4 +63,6 @@ if [ ! -f settings.json ]; then
 
 fi
 
+cat settings.json
+
 exec "$@"
