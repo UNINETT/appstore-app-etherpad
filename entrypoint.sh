@@ -53,30 +53,14 @@ if [ ! -f settings.json ]; then
 	  "sessionKey" : "${ETHERPAD_SESSION_KEY}",
 	  "dbType" : "mysql",
 	  "dbSettings" : {
-			    "user"    : "${ETHERPAD_DB_USER}",
-			    "host"    : "${ETHERPAD_DB_HOST}",
-			    "password": "${ETHERPAD_DB_PASSWORD}",
-			    "database": "${ETHERPAD_DB_NAME}"
-			  },
-	EOF
-
-	if [ $ETHERPAD_ADMIN_PASSWORD ]; then
-
-		: ${ETHERPAD_ADMIN_USER:=admin}
-
-		cat <<- EOF >> settings.json
-		  "users": {
-		    "${ETHERPAD_ADMIN_USER}": {
-		      "password": "${ETHERPAD_ADMIN_PASSWORD}",
-		      "is_admin": true
-		    }
-		  },
-		EOF
-	fi
-
-	cat <<- EOF >> settings.json
+	    "user"    : "${ETHERPAD_DB_USER}",
+	    "host"    : "${ETHERPAD_DB_HOST}",
+	    "password": "${ETHERPAD_DB_PASSWORD}",
+	    "database": "${ETHERPAD_DB_NAME}"
+	  }
 	}
 	EOF
+
 fi
 
 exec "$@"
