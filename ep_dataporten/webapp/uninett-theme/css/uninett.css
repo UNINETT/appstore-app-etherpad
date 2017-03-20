@@ -1,4 +1,4 @@
-@font-face{ 
+@font-face{
 	font-family: 'colfaxThin';
 	src: url('../fonts/colfaxThin.eot');
 	src: url('../fonts/colfaxThin.eot?#iefix') format('embedded-opentype'),
@@ -7,7 +7,7 @@
 	     url('../fonts/colfaxThin.svg#webfont') format('svg');
 }
 
-@font-face{ 
+@font-face{
 	font-family: 'colfaxLight';
 	src: url('../fonts/colfaxLight.eot');
 	src: url('../fonts/colfaxLight.eot?#iefix') format('embedded-opentype'),
@@ -16,7 +16,7 @@
 	     url('../fonts/colfaxLight.svg#webfont') format('svg');
 }
 
-@font-face{ 
+@font-face{
 	font-family: 'colfaxRegular';
 	src: url('../fonts/colfaxRegular.eot');
 	src: url('../fonts/colfaxRegular.eot?#iefix') format('embedded-opentype'),
@@ -25,7 +25,7 @@
 	     url('../fonts/colfaxRegular.svg#webfont') format('svg');
 }
 
-@font-face{ 
+@font-face{
 	font-family: 'colfaxRegularItalic';
 	src: url('../fonts/colfaxRegularItalic.eot');
 	src: url('../fonts/colfaxRegularItalic.eot?#iefix') format('embedded-opentype'),
@@ -34,7 +34,7 @@
 	     url('../fonts/colfaxRegularItalic.svg#webfont') format('svg');
 }
 
-@font-face{ 
+@font-face{
 	font-family: 'colfaxMedium';
 	src: url('../fonts/colfaxMedium.eot');
 	src: url('../fonts/colfaxMedium.eot?#iefix') format('embedded-opentype'),
@@ -43,7 +43,7 @@
 	     url('../fonts/colfaxMedium.svg#webfont') format('svg');
 }
 
-@font-face{ 
+@font-face{
 	font-family: 'colfaxBold';
 	src: url('../fonts/colfaxBold.eot');
 	src: url('../fonts/colfaxBold.eot?#iefix') format('embedded-opentype'),
@@ -57,7 +57,7 @@ body {
 	background-color:#eeebe8;
 	font-family: 'colfaxRegular', Arial, sans-serif;
 	font-size: 16px;
-	line-height: 1.6;	
+	line-height: 1.6;
 	min-height: 2000px;
 	padding-top: 70px;
 }
@@ -72,7 +72,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 h1, h2, h3 {
 	margin-top: 0px;
-	
+
 }
 
 h1, .h1 {
@@ -88,22 +88,22 @@ h2, .h2 {
 	margin-bottom: 20px;
 	font-size: 24px;
 	font-weight: Normal;
-	font-family: 'colfaxRegularItalic', Helvetica, Arial, sans-serif; 
+	font-family: 'colfaxRegularItalic', Helvetica, Arial, sans-serif;
 	line-height: 1.5;
 }
 
 .uninett-author {
-	font-family: 'colfaxRegular', Helvetica, Arial, sans-serif; 
+	font-family: 'colfaxRegular', Helvetica, Arial, sans-serif;
 	font-size: 12px;
 	color: #999;
 	margin-top: 16px;
 	margin-bottom: 16px;
-	
+
 }
 
 a {
 	color: #005c9e;
-	
+
 }
 
 a:hover, a:focus {
@@ -127,47 +127,47 @@ i, em {
 }
 
 input[type="search"] {
-	-webkit-appearance: none; 
+	-webkit-appearance: none;
 	border-radius: 0 3px 3px 0;
 
 }
 
 .navbar-fixed-top {
 	border-width: 0 0 0px;
-	
-	
+
+
 }
 
 .navbar {
 	min-height: 70px;
 	border: 0px;
-	
+
 }
 
 .navbar-default {
 	background-color: #fff;
 	border-color: #fff;
-	
+
 }
 
 
-.navbar-brand {		
+.navbar-brand {
 		padding: 16px 14px;
-		
-		
+
+
 }
 
 
 .navbar-nav {
-	
+
 	margin-top: 17px;
-	
+
 }
 
 
 
 .navbar-nav > li > a {
-	
+
 	font-family: 'colfaxRegular', Arial, sans-serif;
 	font-size: 15px;
 	color: #666464;
@@ -175,7 +175,7 @@ input[type="search"] {
 	padding-right: 25px;
 	padding-top: 13px;
 	padding-bottom: 9px;
-	
+
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -191,13 +191,13 @@ input[type="search"] {
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
 	background-color: #fff;
 	color: #eb212e;
-	
-	
+
+
 }
 
 .navbar-toggle {
 	border: 0px solid transparent;
-	border-radius: 0px;	
+	border-radius: 0px;
 	margin-right: 6px;
 }
 
@@ -212,14 +212,14 @@ input[type="search"] {
 }
 
 .department {
-	
+
 	font-family: 'colfaxLight', Arial, sans-serif;
 	font-size: 26px;
 	color: #6a5f58;
 	float: left;
 	padding-right: 25px;
 	padding-top: 16px;
-	
+
 }
 
 
@@ -237,7 +237,7 @@ input[type="search"] {
 	border: 0px solid #cccccc;
 	border: 1px solid rgba(0, 0, 0, 0);
 	border-radius: 0px;
-	
+
 }
 
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
@@ -286,20 +286,20 @@ input[type="search"] {
 
 .uninett-padded {
 	padding: 40px;
-	
+
 }
 
 .uninett-whole-row {
 	margin-left: 0px;
 	margin-right: 0px;
 	margin-top: 20px;
-	
+
 }
 
 .uninett-whole-row-col {
 	padding-left: 0px;
 	padding-right: 0px;
-	
+
 }
 
 .gutter {
@@ -354,7 +354,7 @@ input[type="search"] {
 
 .uninett-pattern1 {
 	background-image:url(../images/uninett_stuktur1.jpg);
-	
+
 }
 
 
@@ -368,14 +368,14 @@ input[type="search"] {
 	color: #231f20;
 	background-color: #f2f2f2;
 	border-color: #f2f2f2;
-	
+
 }
 
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
 	color: #231f20;
 	background-color: #dfdfdf;
 	border-color: #dfdfdf;
-	
+
 }
 
 
@@ -385,14 +385,14 @@ input[type="search"] {
 	color: #ffffff;
 	background-color: #337db1;
 	border-color: #337db1;
-	
+
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
 	color: #ffffff;
 	background-color: #005c9e;
 	border-color: #005c9e;
-	
+
 }
 
 
@@ -403,14 +403,14 @@ input[type="search"] {
 	color: #ffffff;
 	background-color: #33c09e;
 	border-color: #33c09e;
-	
+
 }
 
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open .dropdown-toggle.btn-success {
 	color: #ffffff;
 	background-color: #00b086;
 	border-color: #00b086;
-	
+
 }
 
 
@@ -420,14 +420,14 @@ input[type="search"] {
 	color: #ffffff;
 	background-color: #8fc1dd;
 	border-color: #8fc1dd;
-	
+
 }
 
 .btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .open .dropdown-toggle.btn-info {
 	color: #ffffff;
 	background-color: #73b1d4;
 	border-color: #73b1d4;
-	
+
 }
 
 
@@ -437,14 +437,14 @@ input[type="search"] {
 	color: #ffffff;
 	background-color: #f59b65;
 	border-color: #f59b65;
-	
+
 }
 
 .btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active, .open .dropdown-toggle.btn-warning {
 	color: #ffffff;
 	background-color: #f3823e;
 	border-color: #f3823e;
-	
+
 }
 
 
@@ -454,14 +454,14 @@ input[type="search"] {
 	color: #ffffff;
 	background-color: #ef4d58;
 	border-color: #ef4d58;
-	
+
 }
 
 .btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .open .dropdown-toggle.btn-danger {
 	color: #ffffff;
 	background-color: #eb212e;
 	border-color: #eb212e;
-	
+
 }
 
 
@@ -495,13 +495,13 @@ input[type="search"] {
 	padding: 4px 11px;
 	margin-bottom: 16px;
 	background-color: #f5f5f5;
-	
-	
+
+
 }
 
 
 .pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus {
-	
+
 	background-color: #337db1;
 	border-color: #337db1;
 
@@ -601,19 +601,19 @@ input[type="search"] {
 .footer-uninett {
 	margin: 0 auto;
 	width: 150px;
-	
+
 }
 
 .footer-logo {
 	float:left;
 	padding: 5px;
-	
+
 }
 
 
 .footer-logo img {
 	max-height: 20px;
-	
+
 }
 
 .footer-uninett-department {
@@ -621,7 +621,7 @@ input[type="search"] {
 	margin-top: 7px;
 	font-family: 'colfaxMedium';
 	color: #333;
-	
+
 }
 
 
@@ -635,8 +635,8 @@ input[type="search"] {
 .uninett-ul-li {
 	background-image: url(../images/li.png);
 	background-repeat: no-repeat;
-	background-position: 0px 8px; 
-	padding-left: 14px; 
+	background-position: 0px 8px;
+	padding-left: 14px;
 	line-height: 30px;
 }
 
@@ -652,208 +652,208 @@ input[type="search"] {
 	.navbar > .container .navbar-brand {
 		margin-left: -14px;
 	}
-  
-	
-  
+
+
+
 }
 
 @media (max-width: 990px) and (min-width: 768px) {
-	
+
 	.navbar-nav {
-	
+
 		margin-top: 16px;
-	
+
 	}
 
 	.navbar > .container .navbar-brand {
 		margin-left: -13px;
 	}
-	
+
 	.container > .navbar-header, .container > .navbar-collapse {
 		margin-top: 2px;
 	}
-	
+
 	.jumbotron h1 {
 		font-size: 50px;
 		font-family: 'colfaxLight', Arial, sans-serif;
 	}
-	
-	.navbar-brand {		
+
+	.navbar-brand {
 		padding: 16px 12px;
 		width: 140px;
-		
+
 	}
-	
+
 	.navbar img {
 		max-width: 100%;
-	
+
 	}
-	
+
 	.department {
-		
+
 		font-family: 'colfaxRegular', Arial, sans-serif;
 		font-size: 22px;
 		float: left;
 		padding-right: 20px;
 		padding-top: 15px;
-		
+
 	}
-		
+
 	.navbar-nav > li > a {
-		
+
 		font-family: 'colfaxRegular', Arial, sans-serif;
 		font-size: 14px;
 		padding-left: 15px;
 		padding-right: 15px;
 		padding-top: 10px;
 		padding-bottom: 9px;
-		
+
 	}
-	
+
 	.glyphicon_search_menu {
 		top: 8px;
 		margin-left: 18px;
 		font-size: 16px;
 	}
 
-	
-	
-	
+
+
+
 }
 
 
 @media (max-width: 767px) {
-	
+
 	body {
 		padding-top: 46px;
 		font-family: 'colfaxLight', Arial, sans-serif;
 		font-size: 14px;
-		line-height: 1.4;	
-	
-	}	
+		line-height: 1.4;
+
+	}
 
 	.navbar {
 		min-height: 50px;
-	
-		
-	}
-	
-	.navbar-nav {
-		margin-bottom: 36px;
-		
+
+
 	}
 
-	
+	.navbar-nav {
+		margin-bottom: 36px;
+
+	}
+
+
 	.navbar img {
 		max-width: 100%;
-	
+
 	}
-	
-	
-	.navbar-brand {		
+
+
+	.navbar-brand {
 		padding: 12px 10px;
 		width: 110px;
-		
+
 	}
-	
+
 	.department {
 		font-family: 'colfaxLight', Arial, sans-serif;
 		font-size: 18px;
 		float: left;
 		padding-right: 0px;
 		padding-top: 13px;
-		
-	}
-	
 
-	
+	}
+
+
+
 	.container > .navbar-header, .container > .navbar-collapse {
 		margin-left: -10px;
-		
+
 	}
-	
+
 	.jumbotron {
 		margin-top: 18px;
-		
+
 	}
-	
+
 	.jumbotron h1 {
 		font-size: 40px;
 		font-family: 'colfaxLight', Arial, sans-serif;
 	}
-	
+
 	.jumbotron p {
 		line-height: 1.3;
 		font-size: 16px;
-		
+
 	}
-	
+
 	h1 {
 		margin-top: 1px;
 	}
-	
+
 	.btn-lg {
 		padding: 10px 16px;
 		font-size: 14px;
 		border-radius: 4px;
 	}
-	
-	
+
+
 	h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 		font-family: "colfaxBold", Helvetica, Arial, sans-serif;
-	
+
 	}
-	
+
 	h1, .h1 {
 		font-size: 36px;
 	}
-	
+
 	h2, .h2 {
 		font-size: 24px;
 	}
-	
+
 	.gutter {
 		margin-top: 15px;
 	}
-	
+
 	.uninett-padded {
 		padding: 20px;
-		
+
 	}
-	
+
 	.uninett-hr-divider {
 		border-top: 1px solid #d9d6d4;
 		margin: 30px 0;
 	}
-	
+
 
 	.lead {
 		font-size: 18px;
 		line-height: 1.4;
 	}
-	
+
 	.uninett-author {
 		font-size: 10px;
 		color: #999;
 		margin-top: 16px;
 		margin-bottom: 16px;
-		
+
 	}
-	
+
 	.uninett-menu-search {
 		margin-left: 20px;
 		margin-top: 10px;
 		width: 87%;
-		
+
 	}
-	
+
 	.glyphicon_search_menu {
 		top: 17px;
 		margin-left: -29px;
 		font-size: 18px;
 	}
-	
-	
+
+
 	.uninett-login-btn {
 		margin-right: 0px;
 		margin-left: 20px;
@@ -867,16 +867,37 @@ input[type="search"] {
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
 only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-resolution: 240dpi) {
-	
+
 	.uninett-ul {
 		padding: 10px 0px 0px 10px;
 	}
-	
+
 	.uninett-ul-li {
 		background-image: url(../images/li@2x.png);
 		line-height: 26px;
 		background-size: 8px;
 	}
-	
+
 }
 
+
+#other_sites_container{
+  background: white;
+  /* width: 100%; */
+  margin: 20px;
+  position: absolute;
+  padding: 10px;
+  bottom: 0px;
+  right: 0px;
+  border-radius: 8px;
+  z-index: 99999;
+  border: 0.5px solid black;
+}
+
+#other_sites_container a, #other_sites_container a:focus, #other_sites_container a:visited{
+  color: red;
+}
+
+#other_sites_container a:hover{
+  color: coral;
+}

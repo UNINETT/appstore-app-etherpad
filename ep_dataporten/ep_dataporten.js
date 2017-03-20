@@ -15,7 +15,7 @@ var config = {
 	callbackURL: redirectUri + "/dataporten/callback",
 }
 
-passport.use(new DataportenStrategy(config, 
+passport.use(new DataportenStrategy(config,
 	function(accessToken, refreshToken, profile, cb) {
 		profile.loadGroups().then(function() {
 			return cb(null, profile);
@@ -64,7 +64,7 @@ exports.expressConfigure = function (hook_name, args, cb) {
 	app.use(bodyParser.json());       // to support JSON-encoded bodies
 	app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 	  extended: true
-	})); 
+	}));
 	app.use(json());       // to support JSON-encoded bodies
 	app.use(passport.initialize());
 	app.use(passport.session());
@@ -126,7 +126,7 @@ exports.expressConfigure = function (hook_name, args, cb) {
 			res.cookie('sessionID', sessionID, { "maxAge": maxAge, "httpOnly": false });
 
 			res.writeHead(200, {"Content-Type": "text/plain; charset=utf-8"});
-			res.end(body);	
+			res.end(body);
 
 		});
 
@@ -143,7 +143,7 @@ exports.expressConfigure = function (hook_name, args, cb) {
 
 			body += "\nGroups:\n" + JSON.stringify(req.session.user.groups, undefined, 2);
 			res.writeHead(200, {"Content-Type": "text/plain; charset=utf-8"});
-			res.end(body);	
+			res.end(body);
 
 		});
 
@@ -158,7 +158,7 @@ exports.expressConfigure = function (hook_name, args, cb) {
 			body += '<h2>List of pads</h2>';
 			body += '<ul>';
 			for(var i =0; i < data.length; i++) {
-				body += '<li><a target="_blank" href="/p/' + data[i].padID + '">' + data[i].padID + '</a>' + 
+				body += '<li><a target="_blank" href="/p/' + data[i].padID + '">' + data[i].padID + '</a>' +
 					'<pre>' + JSON.stringify(data[i], undefined, 2) + '</pre>' +
 					'</li>';
 			}
@@ -169,7 +169,7 @@ exports.expressConfigure = function (hook_name, args, cb) {
 			body += '</ul>';
 
 
-			res.end(body);	
+			res.end(body);
 		});
 
 	});
@@ -182,7 +182,7 @@ exports.expressConfigure = function (hook_name, args, cb) {
 	app.get('/dashboard-api/pads', function(req, res, next) {
 		EAPI.listPads(req.session.user, function(data) {
 			res.writeHead(200, {"Content-Type": "application/json; charset=utf-8"});
-			res.end(JSON.stringify(data, undefined, 2));	
+			res.end(JSON.stringify(data, undefined, 2));
 		});
 	});
 
@@ -191,7 +191,7 @@ exports.expressConfigure = function (hook_name, args, cb) {
 
 		EAPI.createPad(newObject.name, newObject.groupid, function(data) {
 			res.writeHead(200, {"Content-Type": "application/json; charset=utf-8"});
-			res.end(JSON.stringify(data, undefined, 2));	
+			res.end(JSON.stringify(data, undefined, 2));
 
 		});
 	});
@@ -201,10 +201,14 @@ exports.expressConfigure = function (hook_name, args, cb) {
 	});
 
 	app.use('/', function (req, res, next) {
-		if(req.session.user && req.session.user.data.provider == "Dataporten") {
-			next();
+		if(process.env.TLS && req.protocol == "http"){
+			res.redirect("https://"+ req.get('host') + req.originalUrl);
 		} else {
-			res.redirect('/auth/dataporten');
+			if(req.session.user && req.session.user.data.provider == "Dataporten") {
+				next();
+			} else {
+				res.redirect('/auth/dataporten');
+			}
 		}
 	});
 
