@@ -885,7 +885,7 @@ only screen and (min-resolution: 240dpi) {
   background: white;
   /* width: 100%; */
   margin: 20px;
-  position: absolute;
+  position: fixed;
   padding: 10px;
   bottom: 0px;
   right: 0px;
