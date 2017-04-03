@@ -15,16 +15,6 @@ var config = {
 	callbackURL: redirectUri + "/dataporten/callback",
 }
 
-var shouldRedirect = function(req) {
-    if (req.headers["user-agent"].match(/GoogleHC/)) {
-        return false
-    }
-    if (req.protocol === 'https') {
-        return false
-    }
-    return true
-}
-
 passport.use(new DataportenStrategy(config,
 	function(accessToken, refreshToken, profile, cb) {
 		profile.loadGroups().then(function() {
@@ -211,15 +201,11 @@ exports.expressConfigure = function (hook_name, args, cb) {
 	});
 
 	app.use('/', function (req, res, next) {
-		/*if(process.env.TLS && shouldRedirect(req)){
-			res.redirect("https://"+ req.get('host') + req.originalUrl);
-		} else {*/
 			if(req.session.user && req.session.user.data.provider == "Dataporten") {
 				next();
 			} else {
 				res.redirect('/auth/dataporten');
 			}
-		//}
 	});
 
 	app.use('/', exp.static(__dirname + '/webapp/'));
