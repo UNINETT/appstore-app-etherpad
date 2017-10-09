@@ -36,5 +36,8 @@ RUN cd node_modules/ep_dataporten/webapp/uninett-theme/ curl \
 
 EXPOSE 9001
 
+# monkey patch
+RUN sed -e 's/resolve(/return resolve(/' -i 'node_modules/ep_dataporten/node_modules/passport-dataporten/lib/passport-dataporten/DataportenUser.js'
+
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["bin/run.sh", "--root"]
