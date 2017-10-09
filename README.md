@@ -1,51 +1,31 @@
-# ep_dataporten
+# Fast 'n ugly Dataporten + Etherpad deploy
 
-This plugin implements https://github.com/UNINETT/passport-dataporten, and is a further development on https://github.com/andreassolberg/ep_feideconnect
+This is a proof of concept.  Do not use it to store *ANY* data you'd like to hold on.  
+This **WILL** shave your cat and then eat it.
 
-If used without Docker, add this to settings.json:
+This repository forked from https://github.com/UNINETT/ep_dataporten
 
-```
-ep_dataporten:{
-  clientId    : "YOUR_CLIENT_ID",
-  clientSecret: "YOUR_CLIENT_SECRET",
-  host        : "YOUR_REDIRECT_URI"
-}
-```
+Ingredients:
 
-And move the ep_dataporten folder to etherpad/node_modules/
+- Docker
+- Dataporten application credentials (obtain from dashboard.dataporten.no)
 
-If used with Docker, pull the image from
+How to make:
 
-```
-docker pull uninettno/ep_dataporten
-```
+1. Create a file env.txt with contents somewhat similar to:
 
-Run it with:
+		HOST=localhost:8001
+		TLS=false
+		DATAPORTEN_CLIENTID=00000000-0000-0000-0000-000000000000
+		DATAPORTEN_CLIENTSECRET=00000000-0000-0000-0000-000000000000
+		DATAPORTEN_SCOPES=groups,userid,profile,userid-feide,email
 
-```
-docker run -p 80:9001 --env-file=YOUR_ENV_FILE -t uninettno/ep_dataporten
-```
+Remember not to skimp on the scopes!
 
-**IMPORTANT**
+2. Then start the whole rigamarole with:
 
-On Dataporten Dashboard, set callback-url to URL + /dataporten/callback
+		docker rm --force etherpad
+		docker build -t etherpad .
+		docker run -p 8001:9001 --env-file env.txt etherpad
 
-The ENV file should look something like this:
-
-```
-ETHERPAD_DB_HOST=DB_HOSTNAME
-ETHERPAD_DB_USER=DB_USERNAME
-ETHERPAD_DB_PASSWORD=DB_PASSWORD
-ETHERPAD_DB_NAME=DB_NAME
-HOST=localhost  #Don't add http:// here, TLS takes care of this.
-TLS=false
-DATAPORTEN_CLIENTID=********-****-****-****-************
-DATAPORTEN_CLIENTSECRET=********-****-****-****-************
-DATAPORTEN_SCOPES=groups,userid,profile,userid-feide,email
-MYSQL_PORT_3306_TCP_ADDR=3306
-```
-
-```
-kubectl apply -f k8s.yaml
-gcloud compute firewall-rules create service-etherpad --allow=tcp:31567
-```
+3. You should now be able to use Etherpad on http://localhost:8001
