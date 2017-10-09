@@ -9,6 +9,8 @@ Ingredients:
 
 - Docker
 - Dataporten application credentials (obtain from dashboard.dataporten.no)
+	- Make sure that your application has access to all scopes!
+	- `groups` `userid` `profile` `userid-feide` `email`
 
 How to make:
 
