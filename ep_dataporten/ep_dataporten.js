@@ -19,6 +19,8 @@ passport.use(new DataportenStrategy(config,
 	function(accessToken, refreshToken, profile, cb) {
 		profile.loadGroups().then(function() {
 			return cb(null, profile);
+		}).catch(function(err) {
+			return cb(err);
 		});
 	}
 ));
