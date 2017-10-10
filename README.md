@@ -11,6 +11,7 @@ Ingredients:
 - Dataporten application credentials (obtain from dashboard.dataporten.no)
 	- Make sure that your application has access to all scopes!
 	- `groups` `userid` `profile` `userid-feide` `email`
+	- Redirect URL: `http://localhost:8001/dataporten/callback`
 
 How to make:
 
