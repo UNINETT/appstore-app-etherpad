@@ -1,12 +1,12 @@
 # Attempt to deploy using HELM
 
-You need to be logged in, you can get this from https://docs.ioudaas.no/access/
+You need to be logged in, you can get this from https://docs.ioudaas.no/access/.
 
 Make sure you have kubed and kubectl.  You also need helm, which you can get from:
 https://github.com/kubernetes/helm, there are binary downloads available.
 
 Prerequirements:
-- Application is deployed on quay.io, deploy yourself with Docker to avoid giving Quay full control over your GitHub account
+- Application is deployed on quay.io, deploy yourself with Docker to avoid giving Quay full control over your GitHub account.
 - You're standing in the `helm` folder of this repo, it's the folder this README.md file is in.
 
 For more info on Quay, check [this awesome Quay documentation](../QUAY.md).
@@ -19,7 +19,7 @@ For more info on Quay, check [this awesome Quay documentation](../QUAY.md).
 
 		bin/kubectl -n appstore-dep get pods | grep tiller | cut -d\  -f1
 
-We'll assume you just found tiller-1234567890-swagx
+We'll assume you just found `tiller-1234567890-swagx`.
 
 3. Set up port forwarding
 
@@ -34,7 +34,7 @@ We'll assume you just found tiller-1234567890-swagx
 
 		bin/kubectl -n appstore-dep get pods | grep m\$
 
-It's probably the youngest one.  We'll assume your application's name is swaggity-swagger-etherpad-1234567890-swagx
+It's probably the youngest one.  We'll assume your application's name is `swaggity-swagger-etherpad-1234567890-swagx`.
 
 6. Port forward directly from the running Docker container
 
@@ -43,5 +43,5 @@ It's probably the youngest one.  We'll assume your application's name is swaggit
 Sometimes the port is used, which you can see from the `Connection refused` messages.
 Use a different port then.  Update Dataporten accordingly.
 
-Congratiolations!  You've now deployed an application all by yourself!
+Congratulations!  You've now deployed an application all by yourself!
 Wasn't this way easier than doing this by hand?

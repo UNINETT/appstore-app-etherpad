@@ -3,7 +3,7 @@
 This is a proof of concept.  Do not use it to store *ANY* data you'd like to hold on.  
 This **WILL** shave your cat and then eat it.
 
-This repository forked from https://github.com/UNINETT/ep_dataporten
+This repository forked from https://github.com/UNINETT/ep_dataporten.
 
 Ingredients:
 
