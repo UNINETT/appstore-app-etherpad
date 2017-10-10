@@ -1,11 +1,8 @@
 # Attempt to deploy using HELM
 
-You need to be logged in, you can get this from https://docs.ioudaas.no/access/.
-
-Make sure you have kubed and kubectl.  You also need helm, which you can get from:
-https://github.com/kubernetes/helm, there are binary downloads available.
-
 Prerequirements:
+- Kubernetes and KubeD (Kubernetes + Dataporten), obtain from https://docs.ioudaas.no/access/.
+- HELM, obtain from https://github.com/kubernetes/helm, there are binary downloads available.
 - Application is deployed on quay.io, deploy yourself with Docker to avoid giving Quay full control over your GitHub account.
 - You're standing in the `helm` folder of this repo, it's the folder this README.md file is in.
 
