@@ -14,7 +14,7 @@ For more info on Quay, check [this awesome Quay documentation](../QUAY.md).
 
 2. Find the name of the tiller instance you'll be using
 
-		bin/kubectl -n appstore-dep get pods | grep tiller | cut -d\  -f1
+		kubectl -n appstore-dep get pods | grep tiller | cut -d\  -f1
 
 We'll assume you just found `tiller-1234567890-swagx`.
 
@@ -29,16 +29,35 @@ We'll assume you just found `tiller-1234567890-swagx`.
 
 5. Find your application
 
-		bin/kubectl -n appstore-dep get pods | grep m\$
+		kubectl -n appstore-dep get pods
 
 It's probably the youngest one.  We'll assume your application's name is `swaggity-swagger-etherpad-1234567890-swagx`.
 
 6. Port forward directly from the running Docker container
 
-		kubectl -n appstore-dep port-forward swaggity-swagger-etherpad-1234567890-swagx 9001:9001
+		kubectl -n appstore-dep port-forward swaggity-swagger-etherpad-1234567890-swagx 6080:8080
 
 Sometimes the port is used, which you can see from the `Connection refused` messages.
 Use a different port then.  Update Dataporten accordingly.
 
 Congratulations!  You've now deployed an application all by yourself!
-Wasn't this way easier than doing this by hand?
+
+
+## Usual errors:
+
+### Error: file "etherpad" not found
+
+You weren't standing in the `helm` directory, go read a tutorial on `cd`.
+
+You may notice that it says *file* not found while it actually is looking
+for a directory.  That's because **LOOK!** SOMEONE USING ILLUMOS! `runs away`.
+
+
+### Error: context deadline exceeded
+
+Your portforwarding has fallen down.  This happens regulary.
+Just repeat step 2 and 3.  Here's a nice one-liner in three lines:
+
+		kubectl -n appstore-dep port-forward \
+		$(kubectl -n appstore-dep get pods | grep tiller | head -n1 | cut -d\  -f1) \
+		44134:44134 &
